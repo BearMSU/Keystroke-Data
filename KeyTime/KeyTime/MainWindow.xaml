@@ -1,0 +1,26 @@
+﻿<Window x:Class="KeyTime.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KeyTime"
+        mc:Ignorable="d"
+        Title="KeyTime" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="105.882"/>
+            <ColumnDefinition Width="479.118"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="textName" HorizontalAlignment="Left" Height="16" Margin="194,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Grid.Column="1" />
+        <Label x:Name="lblName" Content="Name:" HorizontalAlignment="Left" Height="31" Margin="136,76,0,0" VerticalAlignment="Top" Width="53" Grid.Column="1"/>
+        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="371,237,0,0" VerticalAlignment="Top" Click="btnNext_Click" Height="20" Width="48" Grid.Column="1"/>
+        <Button x:Name="btnRedo" Content="Redo" HorizontalAlignment="Left" Height="20" Margin="194,242,0,0" VerticalAlignment="Top" Click="BtnRedo_Click" Width="48" RenderTransformOrigin="-0.107,0.352" Grid.Column="1"/>
+        <TextBlock x:Name="textBlockInstructions" HorizontalAlignment="Left" Margin="194,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="225" IsEnabled="False" AutomationProperties.HelpText="Instructions for using KeyTime" Text="Enter the word &quot;Michigan&quot; in the box below. Press Next or Redo.  After you have entered the results 10 times the test is over." Grid.Column="1"/>
+        <TextBox x:Name="textPassword" HorizontalAlignment="Left" Height="16" Margin="194,204,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" IsManipulationEnabled="True" Grid.Column="1"/>
+        <TextBlock x:Name="textResult" HorizontalAlignment="Left" Margin="20,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="452" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnTest" Content="Test" HorizontalAlignment="Left" Margin="371,278,0,0" VerticalAlignment="Top" Visibility="Visible" Click="btnTest_Click" Grid.Column="1" IsEnabled="False" Width="48" Height="20"/>
+        <ProgressBar x:Name="pbProgress" Grid.Column="1" HorizontalAlignment="Left" Height="109" Margin="439,111,0,0" VerticalAlignment="Top" Width="13" Orientation="Vertical" Visibility="Visible"/>
+
+    </Grid>
+</Window>
